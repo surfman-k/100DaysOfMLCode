@@ -14,13 +14,8 @@
 ### My Solution:
 
 def dig_pow(n, p):
-    items = str(n)
     result = 0
-    for ind, digit in enumerate(items):
-        result = result + int(digit) ** (ind + p)        
-    if result % n == 0:
-        return result / n
-    else:
-        return -1
+    for ind, digit in enumerate(str(n)):
+        result += pow(int(digit),(ind+p))
+    return result/n if result%n==0 else -1
 
-        
