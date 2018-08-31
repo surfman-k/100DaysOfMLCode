@@ -84,3 +84,47 @@ def longest(s1, s2):
 
 def longest2(a1, a2):
     return "".join(sorted(set(a1 + a2)))
+
+
+#####################################################
+#### 7 kyu - Sum of two lowest positive integers  ###
+#####################################################
+
+# Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers. No floats or empty arrays will be passed.
+
+# For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+# [10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+# Hint: Do not modify the original array.
+
+def sum_two_smallest_numbers(numbers):
+  roted = sorted(numbers)
+  return(roted[0] + roted[1])
+
+
+###############################
+#### 6 kyu - Who Likes It?  ###
+###############################
+
+# You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+# Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
+
+# likes [] // must be "no one likes this"
+# likes ["Peter"] // must be "Peter likes this"
+# likes ["Jacob", "Alex"] // must be "Jacob and Alex like this"
+# likes ["Max", "John", "Mark"] // must be "Max, John and Mark like this"
+# likes ["Alex", "Jacob", "Mark", "Max"] // must be "Alex, Jacob and 2 others like this"
+
+def likes(names):
+    if len(names) == 0:
+        return "no one likes this"
+    if len(names) == 1:
+        return names[0] + " likes this"
+    if len(names) == 2:
+        return names[0] + " and " + names[1] + " like this"
+    if len(names) == 3:
+        return names[0] + ", " + names[1] + " and " + names[2] + " like this"
+    if len(names) > 3:
+        return names[0] + ", " + names[1] + " and " + str(len(names[2:])) + " others like this"
