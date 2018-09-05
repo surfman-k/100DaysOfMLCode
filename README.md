@@ -7,3 +7,5 @@ Day 2: More refresher on Python. Continuing with Kaggle Learn. Yesterday was a g
 Day 3: Jumping on the Machine Learning track on Kaggle Learn! Built a simple model with Pandas!
 
 Day 4: Building a model using pandas and scikit-learn to predict the value of new houses as they enter a given market.
+
+Day 5: After building a model yesterday, today is time to learn about Model Validation as well as underfitting and overfitting! 
