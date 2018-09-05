@@ -5,3 +5,5 @@ Day 1: Refresher on Python. Following the Kaggle Learn Python exercises. It is e
 Day 2: More refresher on Python. Continuing with Kaggle Learn. Yesterday was a good reminder of Python syntax. Today I plan on finishing all Python basics and move onto the real ML tomorrow!
 
 Day 3: Jumping on the Machine Learning track on Kaggle Learn! Built a simple model with Pandas!
+
+Day 4: Building a model using pandas and scikit-learn to predict the value of new houses as they enter a given market.
