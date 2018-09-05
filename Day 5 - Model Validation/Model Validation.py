@@ -35,3 +35,19 @@ def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
     preds_val = model.predict(val_X)
     mae = mean_absolute_error(val_y, preds_val)
     return(mae)
+
+
+# compare MAE with differing values of max_leaf_nodes
+for max_leaf_nodes in [5, 50, 500, 5000]:
+    my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+    print("Max leaf nodes: %d  \t\t Mean Absolute Error:  %d" %(max_leaf_nodes, my_mae))
+# Max leaf nodes: 5  		 Mean Absolute Error:  347380
+# Max leaf nodes: 50  		 Mean Absolute Error:  258171
+# Max leaf nodes: 500  		 Mean Absolute Error:  243495
+# Max leaf nodes: 5000       Mean Absolute Error:  254983
+
+# Here's the takeaway: Models can suffer from either:
+
+# Overfitting: capturing spurious patterns that won't recur in the future, leading to less accurate predictions, or
+# Underfitting: failing to capture relevant patterns, again leading to less accurate predictions.
+# We use validation data, which isn't used in model training, to measure a candidate model's accuracy. This lets us try many candidate models and keep the best one.
