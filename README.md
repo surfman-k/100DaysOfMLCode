@@ -11,3 +11,5 @@ Day 4: Building a model using pandas and scikit-learn to predict the value of ne
 Day 5: After building a model yesterday, today is time to learn about Model Validation as well as underfitting and overfitting! 
 
 Day 6: Random Forest! Working with difficult decision trees. Also, decided to practice some tougher python algorithms on Codewars today!
+
+Day 7: Learning how to handle missing values using three different approaches. Comparing the effectiveness of these approaches on any given dataset. 
