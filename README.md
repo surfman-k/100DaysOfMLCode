@@ -13,3 +13,5 @@ Day 5: After building a model yesterday, today is time to learn about Model Vali
 Day 6: Random Forest! Working with difficult decision trees. Also, decided to practice some tougher python algorithms on Codewars today!
 
 Day 7: Learning how to handle missing values using three different approaches. Comparing the effectiveness of these approaches on any given dataset. 
+
+Day 8: Learning about categorical data and one hot encoding. The world is filled with categorical data so this is very important to help me master machine learning and data science!
