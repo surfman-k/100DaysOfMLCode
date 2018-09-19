@@ -15,3 +15,5 @@ Day 6: Random Forest! Working with difficult decision trees. Also, decided to pr
 Day 7: Learning how to handle missing values using three different approaches. Comparing the effectiveness of these approaches on any given dataset. 
 
 Day 8: Learning about categorical data and one hot encoding. The world is filled with categorical data so this is very important to help me master machine learning and data science!
+
+Day 9: XGBoost, the leading model for working with standard tabular data.
