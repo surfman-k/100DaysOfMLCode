@@ -50,3 +50,24 @@ mae_one_hot_encoded = get_mae(one_hot_encoded_training_predictors, target)
 print('Mean Absolute Error when Dropping Categoricals: ' + str(int(mae_without_categoricals)))
 print('Mean Abslute Error with One-Hot Encoding: ' + str(int(mae_one_hot_encoded)))
 
+# Applying to Multiple Files
+# So far, you've one-hot-encoded your training data. What about when you have multiple files (e.g. a test dataset, or some other data that you'd like to make predictions for)? Scikit-learn is sensitive to the ordering of columns, so if the training dataset and test datasets get misaligned, your results will be nonsense. This could happen if a categorical had a different number of values in the training data vs the test data.
+
+# Ensure the test data is encoded in the same manner as the training data with the align command:
+
+one_hot_encoded_training_predictors = pd.get_dummies(train_predictors)
+one_hot_encoded_test_predictors = pd.get_dummies(test_predictors)
+final_train, final_test = one_hot_encoded_training_predictors.align(one_hot_encoded_test_predictors,
+                                                                    join='left', 
+                                                                    axis=1)
+
+# The align command makes sure the columns show up in the same order in both datasets (it uses column names to identify which columns line up in each dataset.) The argument join='left' specifies that we will do the equivalent of SQL's left join. That means, if there are ever columns that show up in one dataset and not the other, we will keep exactly the columns from our training data. The argument join='inner' would do what SQL databases call an inner join, keeping only the columns showing up in both datasets. That's also a sensible choice.
+
+# Conclusion
+# The world is filled with categorical data. You will be a much more effective data scientist if you know how to use this data. Here are resources that will be useful as you start doing more sophisticated work with cateogircal data.
+
+# Pipelines: Deploying models into production ready systems is a topic unto itself. While one-hot encoding is still a great approach, your code will need to built in an especially robust way. Scikit-learn pipelines are a great tool for this. Scikit-learn offers a class for one-hot encoding and this can be added to a Pipeline. Unfortunately, it doesn't handle text or object values, which is a common use case.
+
+# Applications To Text for Deep Learning: Keras and TensorFlow have fuctionality for one-hot encoding, which is useful for working with text.
+
+# Categoricals with Many Values: Scikit-learn's FeatureHasher uses the hashing trick to store high-dimensional data. This will add some complexity to your modeling code.
