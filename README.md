@@ -17,3 +17,5 @@ Day 7: Learning how to handle missing values using three different approaches. C
 Day 8: Learning about categorical data and one hot encoding. The world is filled with categorical data so this is very important to help me master machine learning and data science!
 
 Day 9: XGBoost, the leading model for working with standard tabular data.
+
+Day 10: It's been too long! Let's get back into it. Finishing work on XGBoost and learning about Partial Dependence Plots!
